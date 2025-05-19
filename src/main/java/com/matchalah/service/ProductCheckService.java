@@ -115,7 +115,7 @@ public class ProductCheckService {
         return sb.toString();
     }
 
-    @Scheduled(cron = "*/30 * * * * ?")  //every 3 minutes
+    @Scheduled(cron = "0 */3 * * * ?")  //every 3 minutes
     public void checkProductAvailability() {
 
         log.info("Checking product availability for: {}", PRODUCT_URL);
