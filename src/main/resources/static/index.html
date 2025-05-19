@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchaLah</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-image {
+          height: 60vh;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://placehold.co/1200x800");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+
+        .hero-text {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+        }
+
+        .fact-card {
+          height: 100%;
+          transition: transform 0.3s;
+        }
+
+        .fact-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .bg-light-green {
+          background-color: #e8f5e9;
+        }
+
+        .text-green {
+          color: #2e7d32;
+        }
+
+        footer {
+          background-color: #1b5e20;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand" href="#">MatchaLah</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#facts">Fun Facts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#types">Types</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 class="display-3 fw-bold">Discover Green Tea</h1>
+        <p class="lead">Nature's gift for wellness, taste, and tradition</p>
+        <a href="#facts" class="btn btn-lg btn-success mt-3">Explore Fun Facts</a>
+    </div>
+</div>
+
+<!-- Fun Facts Section -->
+<section id="facts" class="py-5 bg-light-green">
+    <div class="container">
+        <h2 class="text-center mb-5 text-green">Fun Facts About Green Tea</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card fact-card shadow">
+                    <img src="https://placehold.co/400x250" class="card-img-top" alt="Green tea leaves">
+                    <div class="card-body">
+                        <h5 class="card-title text-green">Ancient Origins</h5>
+                        <p class="card-text">Green tea originated in China over 5,000 years ago and was initially used as medicine before becoming a popular beverage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card fact-card shadow">
+                    <img src="https://placehold.co/400x250" class="card-img-top" alt="Green tea ceremony">
+                    <div class="card-body">
+                        <h5 class="card-title text-green">Same Plant, Different Process</h5>
+                        <p class="card-text">All tea varieties (green, black, white, oolong) come from the same plant, Camellia sinensis. The difference is in how the leaves are processed!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card fact-card shadow">
+                    <img src="https://placehold.co/400x250" class="card-img-top" alt="Antioxidants">
+                    <div class="card-body">
+                        <h5 class="card-title text-green">Catechin Power</h5>
+                        <p class="card-text">Green tea contains powerful antioxidants called catechins, which may boost metabolism and help protect against various diseases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Types of Green Tea -->
+<section id="types" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 text-green">Popular Green Tea Varieties</h2>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h3 class="text-green">Matcha</h3>
+                <p>Matcha is a finely ground powder of specially grown and processed green tea leaves. It contains higher amounts of caffeine and antioxidants than regular green tea because you consume the entire leaf.</p>
+                <p>It's traditionally used in Japanese tea ceremonies and has become popular worldwide in lattes, desserts, and more.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://placehold.co/500x300" class="img-fluid rounded shadow" alt="Matcha tea">
+            </div>
+        </div>
+        <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <h3 class="text-green">Sencha</h3>
+                <p>Sencha is the most popular green tea in Japan, accounting for about 80% of tea produced there. It has a refreshing taste with sweet, grassy, and slightly bitter notes.</p>
+                <p>The leaves are steamed to prevent oxidation, then rolled, shaped, and dried, resulting in thin, needle-like tea leaves that brew a clear, yellow-green tea.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://placehold.co/500x300" class="img-fluid rounded shadow" alt="Sencha tea">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Did You Know Section -->
+<section class="py-5 bg-success text-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Did You Know?</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div id="teaFactsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="p-4 text-center">
+                                <h4>Green tea can boost brain function</h4>
+                                <p>Green tea contains caffeine and L-theanine, which can improve brain function, mood, and alertness.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="p-4 text-center">
+                                <h4>Second largest consumed beverage</h4>
+                                <p>After water, tea is the second most consumed beverage in the world.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="p-4 text-center">
+                                <h4>Green tea ice cream</h4>
+                                <p>In Japan, green tea (matcha) is a popular ice cream flavor and appears in many desserts!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="text-green mb-4">About This Site</h2>
+                <p class="lead">Green Tea Wonders is dedicated to sharing knowledge about one of the world's most beloved beverages. We're not selling anything—just brewing up interesting facts about green tea's rich history, diverse varieties, and remarkable benefits.</p>
+                <p>Whether you're a tea enthusiast or just curious about this ancient drink, we hope you've learned something new during your visit!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4">
+    <div class="container text-center">
+        <p>© 2025 Green Tea Wonders | Created with ❤️ and Bootstrap</p>
+        <p class="small">This is an educational website sharing fun facts about green tea.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
