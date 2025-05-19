@@ -19,8 +19,8 @@ public class ProductCheckService {
 
     private static final Logger log = LoggerFactory.getLogger(ProductCheckService.class);
 
-    //private static final String PRODUCT_URL = "https://horiishichimeien.com/products/matcha-todounomukashi";
-    private static final String PRODUCT_URL = "https://horiishichimeien.com/en/products/sencha-homarenokaori";
+    private static final String PRODUCT_URL = "https://horiishichimeien.com/products/matcha-todounomukashi";
+    //private static final String PRODUCT_URL = "https://horiishichimeien.com/en/products/sencha-homarenokaori";
 
     private static final Random random = new Random();
 
