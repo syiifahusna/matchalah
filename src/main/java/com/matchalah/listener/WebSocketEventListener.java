@@ -17,7 +17,7 @@ public class WebSocketEventListener {
     @EventListener
     public void handleWebSocketConnectListener(SessionConnectEvent event) {
         StompHeaderAccessor sha = StompHeaderAccessor.wrap(event.getMessage());
-        log.info("New WebSocket connection from sessionId: {}", sha.getSessionId());
+        log.info("New WebSocket connection from Session ID: {}", sha.getSessionId());
     }
 
     @EventListener
