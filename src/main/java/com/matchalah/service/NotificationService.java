@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Component
 public class NotificationService {
 
-    private static Logger log = LoggerFactory.getLogger(NotificationService.class);
+    private static final Logger log = LoggerFactory.getLogger(NotificationService.class);
 
     private final SimpMessagingTemplate messagingTemplate;
     // Track the last time a notification was sent

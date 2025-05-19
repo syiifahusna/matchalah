@@ -17,7 +17,7 @@ import java.util.Random;
 @Service
 public class ProductCheckService {
 
-    private static Logger log = LoggerFactory.getLogger(ProductCheckService.class);
+    private static final Logger log = LoggerFactory.getLogger(ProductCheckService.class);
 
     private static final String PRODUCT_URL = "https://horiishichimeien.com/products/matcha-todounomukashi";
     //private static final String PRODUCT_URL = "https://horiishichimeien.com/en/products/sencha-homarenokaori";
@@ -115,7 +115,7 @@ public class ProductCheckService {
         return sb.toString();
     }
 
-    @Scheduled(cron = "0 */1 * * * ?")  //every 3 minutes
+    @Scheduled(cron = "*/30 * * * * ?")  //every 3 minutes
     public void checkProductAvailability() {
 
         log.info("Checking product availability for: {}", PRODUCT_URL);
@@ -155,7 +155,6 @@ public class ProductCheckService {
                 .referrer(referrer)
                 .header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
                 .header("Accept-Language", acceptLanguage)
-                .header("Accept-Encoding", "gzip, deflate, br")
                 .header("DNT", random.nextBoolean() ? "1" : null)
                 .header("Connection", "keep-alive")
                 .header("Upgrade-Insecure-Requests", "1")
@@ -185,11 +184,13 @@ public class ProductCheckService {
         // Look for specific elements that might indicate sold out status
         boolean soldOutElementsPresent = !document.select("button.disabled, button[disabled], .sold-out, .out-of-stock").isEmpty();
 
-        // Product is in stock if no sold out indicators are found
+        //if soldOut is present product is not in stock
         if(soldOutTextPresent || soldOutElementsPresent){
-            return true;
-        }else{
+            //product not in stock
             return false;
+        }else{
+            // product is in stock
+            return true;
         }
     }
 
